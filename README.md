@@ -220,53 +220,43 @@ Stop a node installed in an alternative base directory.
 ```bash
 gaianet stop --base $HOME/gaianet.alt
 ```
+### Chat with Your Node
+To interact with your node and earn XP, visit: [Pengu Gaia Domain](https://megaeth.gaia.domains)
 
-### Update configuration
+* You need **Credit Balance** to be able to chat with your node.
+* Everyday, Convert your **Gaiapoints** to **Credit Balance**.
+* Your Gaiapoints will remain same after converting and You can convert 1000 gaiapoints everyday.
 
-Using `gaianet config` subcommand can update the key fields defined in the `config.json` file. You MUST run `gaianet init` again after you update the configuartion.
+![image](https://github.com/user-attachments/assets/ba7e9d4c-70b7-4621-97ae-7f0633303154)
 
-To update the `chat` field, for example, use the following command:
 
-```bash
-gaianet config --chat-url "https://huggingface.co/second-state/Llama-2-13B-Chat-GGUF/resolve/main/Llama-2-13b-chat-hf-Q5_K_M.gguf"
-```
+---
 
-To update the `chat_ctx_size` field, for example, use the following command:
+### Run AutoChat Bot 
+1. **Create an API Key**:
+   - Go to [Gaia API Keys](https://www.gaianet.ai/setting/gaia-api-keys) and create a new key. Save the API key somewhere since you won't be able to access it again.
 
-```bash
-gaianet config --chat-ctx-size 5120
-```
+2. **Download the Python Script**:
+   - Run:
+     ```bash
+     curl -L -o gaiabot.py https://github.com/cryptobasketgit/gaianet-node/blob/main/gaiabot.py
+     ```
 
-Below are all options of the `config` subcommand.
+3. **Run the Script**:
+   - Open a screen to run the bot in the background, so if you closed the terminal, it won't stop:
+     ```bash
+     screen -S gaiabot
+     ```
+   - Now run this command to start the bot:
+     ```bash
+     python3 gaiabot.py
+     ```
+   - Enter your Gaia API key when prompted.
 
-```console
-$ gaianet config --help
+* To minmize the screen, press `Ctrl+A+D`
+* To return the screen, enter command: `screen -r gaiabot`
+* To stop and kill the bot, press `CTRL+C` inside the screen & run this command: `screen -XS gaiabot quit`
 
-Usage: gaianet config [OPTIONS]
+It might gives you failed attempts which is because of networks floods, as you can see in the picture that I may get a successfull response after 3 or more attempts
 
-Options:
-  --chat-url <url>               Update the url of chat model.
-  --chat-ctx-size <val>          Update the context size of chat model.
-  --embedding-url <url>          Update the url of embedding model.
-  --embedding-ctx-size <val>     Update the context size of embedding model.
-  --prompt-template <val>        Update the prompt template of chat model.
-  --port <val>                   Update the port of LlamaEdge API Server.
-  --system-prompt <val>          Update the system prompt.
-  --rag-prompt <val>             Update the rag prompt.
-  --rag-policy <val>             Update the rag policy [Possible values: system-message, last-user-message].
-  --reverse-prompt <val>         Update the reverse prompt.
-  --domain <val>                 Update the domain of GaiaNet node.
-  --snapshot <url>               Update the Qdrant snapshot.
-  --qdrant-limit <val>           Update the max number of result to return.
-  --qdrant-score-threshold <val> Update the minimal score threshold for the result.
-  --base <path>                  The base directory of GaiaNet node.
-  --help                         Show this help message
-```
-
-Have fun!
-
-### Contributors
-
-<a href="https://github.com/GaiaNet-AI/gaianet-node/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=GaiaNet-AI/gaianet-node" alt="Gaia project contributors" />
-</a>
+![image](https://github.com/user-attachments/assets/71ce30c6-2c3d-44b5-a3f5-b2a7781062bb)
