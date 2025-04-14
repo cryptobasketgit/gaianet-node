@@ -221,7 +221,7 @@ Stop a node installed in an alternative base directory.
 gaianet stop --base $HOME/gaianet.alt
 ```
 ### Chat with Your Node
-To interact with your node and earn XP, visit: [Pengu Gaia Domain](https://megaeth.gaia.domains)
+To interact with your node and earn XP, visit: [Megaeth Gaia Domain](https://megaeth.gaia.domains)
 
 * You need **Credit Balance** to be able to chat with your node.
 * Everyday, Convert your **Gaiapoints** to **Credit Balance**.
