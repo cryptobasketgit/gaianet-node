@@ -239,7 +239,8 @@ To interact with your node and earn XP, visit: [Megaeth Gaia Domain](https://meg
 2. **Download the Python Script**:
    - Run:
      ```bash
-     curl -L -o gaiabot.py https://github.com/cryptobasketgit/gaianet-node/blob/main/gaiabot.py
+     curl -L -o gaiabot.py curl -O https://raw.githubusercontent.com/cryptobasketgit/gaianet-node/main/gaiabot.py
+
      ```
 
 3. **Run the Script**:
